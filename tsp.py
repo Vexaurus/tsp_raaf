@@ -5,7 +5,6 @@ import csv
 from ortools.constraint_solver import routing_enums_pb2, pywrapcp
 from dataclasses import dataclass
 import math
-import pandas as pd
 
 # --- Constants
 LAT_SHIFT = -34.928585
@@ -43,6 +42,7 @@ def to_vector(inputing: float) -> int:
 def find_distances(initial: Point, others: list) -> list:
     """Get the distances of every point to this point and return in a list
 
+        Changes to vectors because why not
     Args:
         initial (Point): Point to compare others too.
         others (list): Other points.
